@@ -1,0 +1,13 @@
+.root {
+    &.primary {
+        background-color: orange;
+        color: white;
+    }
+    &.secondary {
+        background-color: blue;
+        color: white;
+    }
+    &.upperCase {
+      text-transform: uppercase;
+    }
+}

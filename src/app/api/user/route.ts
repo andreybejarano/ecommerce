@@ -7,7 +7,7 @@ export async function GET() {
     const users = await User.find({}).select(['-password', '-__v']).populate('role', ['-__v']);
     return Response.json({ data: users, status: 200 });
   } catch (error) {
-    return Response.json({ error });
+    return Response.json({ error }, { status: 500 });
   }
 }
 
@@ -22,5 +22,3 @@ export async function POST(req: Request) {
     return Response.json({ error });
   }
 }
-
-

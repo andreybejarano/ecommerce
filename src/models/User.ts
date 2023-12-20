@@ -12,7 +12,7 @@ const UserShema = new mongoose.Schema<User>({
   name: String,
   email: String,
   password: String,
-  role: { ref: 'Role', type: mongoose.Schema.Types.ObjectId, default: null }
+  role: { ref: 'Role', type: mongoose.Schema.Types.ObjectId, required: true }
 });
 
 UserShema.pre('save', function (next) {
